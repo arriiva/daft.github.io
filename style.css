@@ -1,0 +1,301 @@
+
+/* Стили для изображения вместо заголовка */
+.header {
+  text-align: center; /* Центрирование */
+  margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.header-image {
+  max-width: 100%; /* Адаптивная ширина */
+  height: auto; /* Сохранение пропорций */
+}
+/* Контейнер для центрирования */
+.image-container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  height: 300px; /* Высота контейнера */
+  width: 100%; /* Ширина контейнера */
+  overflow: hidden; /* Обрезать изображение, если оно выходит за границы */
+}
+
+/* Картинка с сохранением пропорций */
+.responsive-image {
+  max-width: 100%; /* Ограничить ширину по контейнеру */
+  max-height: 100%; /* Ограничить высоту по контейнеру */
+  object-fit: contain; /* Сохранить пропорции внутри контейнера */
+}
+
+
+/* Стили для сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,#046aa5,#000)
+
+    
+  }
+  
+  header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .slider {
+    position: relative;
+    width: 60%;
+    height: 40%;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+
+  }
+  
+  .slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .slider-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+   
+  }
+  
+  .gallery img {
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 150px;
+    
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    text-align: center;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Увеличенное изображение */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    
+  }
+  
+  .modal button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #time-widget {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* капча */
+  .captcha-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   
+}
+
+.captcha-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.captcha {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #333;
+    filter: blur(2px);
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none; 
+}
+
+button#refresh-captcha {
+  margin-bottom: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.content {
+    display: none;
+}
+
+/* Стили для музыкального плеера */
+.music-player {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  border: none;
+  background-color: #6200ea;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #3700b3;
+}
+
+.text-container {
+  max-width: 1000px; /* Ограничиваем ширину текста */
+  margin: 0 auto; /* Центрируем текст */
+  padding: 20px; /* Добавляем отступы */
+  text-decoration: white;
+  color: white;
+}
+
+.text-container p {
+  font-family: 'Georgia', serif; /* Другой шрифт для параграфа */
+  font-size: 1.2em; /* Размер шрифта */
+  line-height: 1.6; /* Высота строки для удобочитаемости */
+  color: #ffffff; /* Цвет текста */
+  text-align: justify; /* Выравнивание по ширине */
+}
+
+/* Центрируем видео и задаем стили */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+video {
+  max-width: 100%; /* Видео будет адаптироваться под ширину контейнера */
+  height: auto; /* Сохраняем пропорции */
+  border: 2px solid #ddd; /* Рамка */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
